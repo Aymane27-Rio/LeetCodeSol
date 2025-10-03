@@ -4,4 +4,4 @@ This repository contains my solutions to various coding problems from [LeetCode]
 
 ## 📁 Structure
 
-The problems are organized by topic, and solutions are typically written in Python.
+The problems are organized by topic, and solutions are typically written in Python. Sometimes I use JavaScript and currently trying to sharpen the work with C++.
