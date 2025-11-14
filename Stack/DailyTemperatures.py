@@ -16,6 +16,7 @@
 
 
 
+#Brute force and gives time limit exceeded in some cases
 
 class Solution(object):
     def dailyTemperatures(self, temperatures):
@@ -37,4 +38,22 @@ class Solution(object):
                     break
             else:
                 answer.append(0)
+        return answer
+
+
+
+# Much better solution with complexity O(n)
+
+
+class Solution(object):
+    def dailyTemperatures(self, temperatures):
+        n = len(temperatures)
+        answer = [0] * n
+        stack = []
+
+        for i, temp in enumerate(temperatures):
+            while stack and temp > temperatures[stack[-1]]:
+                prev = stack.pop()
+                answer[prev] = i - prev
+            stack.append(i)
         return answer
